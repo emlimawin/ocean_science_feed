@@ -1,0 +1,19 @@
+.main {
+    grid-column: 2;
+    grid-row: 2;
+    display: grid;
+    grid-template-columns: 18em 1fr 18em;
+    grid-template-rows: 1fr;
+}
+
+.columnLeft {
+    grid-column: 1;
+    grid-row: 1;
+    border-right: 1px dashed black;
+}
+
+.columnRight {
+    grid-column: 3;
+    grid-row: 1;
+    border-left: 1px dashed black;
+}

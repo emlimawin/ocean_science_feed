@@ -1,0 +1,118 @@
+.sortContainer {
+    grid-column: 3;
+    justify-self: start;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 1.5em;
+}
+
+.sortText {
+    align-self: center;
+    justify-self: flex-end;
+    padding-right: 1em;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 1em;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
+
+.dropDown {
+    position: relative;
+    height: 2.5em;
+    width: 7.6em;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+
+    outline: 2.5px solid black;
+    border: none;
+    border-radius: 1em;
+    background-color: var(--blue);
+    cursor: pointer;
+
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
+
+.selectChoice {
+    padding-right: 1em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
+
+.arrowSort {
+    border-left: 2.5px solid black;
+    border-bottom: 2.5px solid black;
+    width: 0.8rem;
+    height: 0.8rem;
+    margin-bottom: 0.2em;
+    transform: rotate(-45deg);
+}
+
+.dropDownChoice {
+    position: absolute;
+    display: none;
+    top: 2.5em;
+    width: 7.6em;
+    outline: 2.5px solid black;
+    
+    border-radius: 0 0 1em 1em;
+    background-color: var(--blue);
+
+    list-style: none;
+    padding-left: 0;
+    text-align: center;
+}
+
+.sortChoice, .sortChoice2{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 2.5em;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.sortChoice2::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+}
+
+.dropDown:hover {
+    border-bottom: 0;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    background-color: var(--lightbeige);
+}
+
+.dropDown:hover .dropDownChoice {
+    display: block;
+    background-color: var(--lightbeige);
+    overflow: hidden;
+}
+
+.dropDown:hover .arrowSort {
+    transform: rotate(135deg);
+    margin-top: 0.3em;
+}
+.sortChoice:hover, .sortChoice2:hover {
+    background-color: var(--blue);
+}

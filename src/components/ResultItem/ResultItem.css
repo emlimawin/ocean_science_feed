@@ -1,0 +1,81 @@
+.cardWrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 15em 1fr;
+    grid-template-rows: 1fr 1fr;
+    gap: 1em;
+    border: 1px solid black;
+    padding: 1em 2em 1em 1em;
+    background-color: none; 
+}
+
+.postImage {
+    grid-column: 1;
+    grid-row: span 2;
+    height: 12em;
+    width: 15em;
+    border: 1px solid black;
+    padding: 0.2em;
+}
+
+.textWrapper {
+    grid-column: 2;
+    grid-row: span 2;
+    display: flex;
+    flex-direction: column;
+    --lh: 1.4em;
+}
+
+.postDescription {
+    width: 100%;
+    line-height: var(--lh);
+    --max-lines: 4;
+    max-height: calc(var(--lh) * var(--max-lines));
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dots {
+    align-self: start;
+    font-weight: 900;
+    font-size: 1em;
+}
+
+.btn {
+    align-self: flex-end;
+    width: 5.5em;
+    height: 2.4em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 2.5px solid black;
+    border-radius: 0.7em;
+    background-color: var(--blue);
+    cursor: pointer;
+}
+
+.btn:hover {
+    background-color: var(--lightbeige);
+    border: 2px solid black;
+}
+
+.arrow {
+    border-left: 2.5px solid black;
+    border-bottom: 2.5px solid black;
+    width: 0.5rem;
+    height: 0.5rem;
+    transform: rotate(-135deg);
+}
+
+.btn-text {
+    padding-bottom: 0.1em;
+    padding-right: 0.3em;
+    line-height: 0em;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-size: 0.9em;
+    font-style: normal;
+    font-variation-settings:"slnt" 0;
+}
